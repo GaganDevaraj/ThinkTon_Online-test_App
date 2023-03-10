@@ -1,0 +1,18 @@
+.header-line{	margin-top: 3px;
+				padding: 35px;
+				color: white; 
+				font-family: inherit; 
+				letter-spacing: 2px; 
+				text-align: center;
+				text-shadow: 2px 2px 2px #4A4848;
+				font-size: 29px;
+			}
+			
+.demoview { background: whitesmoke;
+			padding: 20px;font-size: 
+			16px;line-height: 24px;
+			border: 1px solid #CCCCCC;
+			margin-top: -14px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+		 }

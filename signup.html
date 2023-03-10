@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JSpiders | Online Test Portal</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<style>
+		#nav1
+	{
+	}
+
+		#nav1 > ul > li
+		{
+			display: inline-block;
+		}
+		
+			#nav1 > ul > li:last-child
+			{
+				padding-right: 0;
+			}
+
+			#nav1 > ul > li > a,
+			#nav1 > ul > li > span
+			{
+				display: block;
+				padding: 0.5em 1.5em;
+				letter-spacing: 1px;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: 200;
+				font-size: 1.2em;
+				outline: 0;
+				color: rgba(255,255,255,.7);
+			}
+
+
+			#nav1 > ul > li > a:hover
+			{
+				color: #FFF;
+			}
+
+			#nav1 li.active a
+			{
+				background: none;
+				border-radius: 40px;
+				border: 2px solid;
+				border-color: rgba(255,255,255,.8);
+				color: #FFF;
+			}
+
+			#nav1 > ul > li > ul
+			{
+				display: none;
+			}
+	
+	</style>
+	</head>
+	<body class="landing">
+		<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">ThinkTon</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">About US</a></li>
+						<li><a href="generic.html">Carrier</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner8" style="padding: 2em 0em 6em;">
+			
+			</section>
+
+		<!-- One -->
+		<section id="two" class="wrapper style2 align-center">
+			<div class="container">
+				<header style="border: none;padding: 0px;">
+					<h2><b>Sign-Up</b></h2>
+					<p>Signup to take test</p>
+				</header>
+				<div class="container" style="text-align:left;">
+					<div class="row">
+						<div class="col-lg-1">
+						
+						</div>
+						<div class="col-lg-10">
+							<form name="regform" onsubmit="return_valid()">
+								<div class="form-group">
+									<label for="exampleInputEmail1" style="font-size:15px;">Batch Code</label>
+									<input type="text" class="form-control" name="batchcode" id="batchcode" ng-model="batchcode" placeholder="Enter Batch Code">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1" style="font-size:15px;">Name</label>
+									<input type="text" class="form-control" name="name" id="name" ng-model="name" placeholder="Enter Your Full Name">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1" style="font-size:15px;">Contact Number</label>
+									<input type="text" class="form-control" name="contactnumber" id="contactnumber" ng-model="contact" placeholder="Enter your 10 digits contact number">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1" style="font-size:15px;">Email ID</label>
+									<input type="text" class="form-control" name="emailid" id="emailid" ng-model="emailid" placeholder="Enter your Mail ID">
+								</div>
+						  
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+										<label for="exampleInputEmail1" style="font-size:15px;">Qualification</label>
+										<div>
+										<select id="qualification" ng-model="qualification" class="form-control">
+											<option value="BE/Btech">BE/Btech</option>
+											<option value="Mtech">Mtech</option>
+											<option value="BCA">BCA</option>
+											<option value="MCA">MCA</option>
+											<option value="MBA">MBA</option>
+										</select>
+									  </div>
+									  </div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="exampleInputEmail1" style="font-size:15px;">Stream: </label>
+											<input type="text" class="form-control" name="stream" id="stream" ng-model="stream" placeholder="Stream">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label for="exampleInputEmail1" style="font-size:15px;">Year Of Passout</label>
+											<input type="text" class="form-control" name="yop" id="yop" ng-model="yop" placeholder="Year Of Passout">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="exampleInputEmail1" style="font-size:15px;">Master</label>
+											<input type="text" class="form-control" name="master" id="master" ng-model="master" placeholder="100.00%">
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="exampleInputEmail1" style="font-size:15px;">Degree</label>
+											<input type="text" class="form-control" name="degree" id="degree" ng-model="degree" placeholder="100.00%">
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="exampleInputEmail1" style="font-size:15px;">12th</label>
+											<input type="text" class="form-control" name="12" id="12" ng-model="twelve" placeholder="100.00%">
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="exampleInputEmail1" style="font-size:15px;">10th</label>
+											<input type="text" class="form-control" name="10" id="10" ng-model="ten" placeholder="100.00%">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<button type="reset" class="btn btn-default btn-lg btn-block">Reset</button>
+									</div>
+									<div class="col-md-6">
+										<button type="submit" class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#myModal">SignUp</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-1">
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="4u 6u(medium) 12u$(small)">
+							<h3>About ThinkTon</h3>
+							<p>ThinkTon is an online assessment portal which aims at helping students to know there
+					transcend boundaries and time constraints in the task of constant evaluation performance. 
+					This test provides extensive tools to administer to monitor and grade for your performance.</p>
+							<ul class="alt">
+								<li><a href="#">Visit our website for more info.</a></li>
+							</ul>
+						</section>
+						<section class="4u 6u$(medium) 12u$(small)">
+							<h3>About JSpiders</h3>
+							<p>JSpiders is No.1 JAVA/J2EE training institute in India with a view to bridge the gap 
+							between Industry Requirement and curriculum of educational institutions and also to meet 
+							the ever increasing demand for Quality IT professional.</p>
+							<ul class="alt">
+								<li><a href="#">Visit our website for more info.</a></li>
+							</ul>
+						</section>
+						<section class="4u$ 12u$(medium) 12u$(small)">
+							<h3>Contact Us</h3>
+							<ul class="icons">
+								<li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon rounded fa-pinterest"><span class="label">Pinterest</span></a></li>
+								<li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
+								<li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="tabular">
+								<li>
+									<h3>Address</h3>
+									Bangalore, Karnataka<br>
+									India
+								</li>
+							</ul>
+						</section>
+					</div>
+					<ul class="copyright">
+						<li>&copy; JSpiders. All rights reserved.</li>
+						<li>Design: <a href="#">TechPro</a></li>
+						<li>Curtasy: <a href="#">DevTech</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>

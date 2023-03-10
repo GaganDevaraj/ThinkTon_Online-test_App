@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Online Test</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"/>
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"/>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"/></script>
+    <script type="text/javascript" src="quiz_functions.js"></script>
+	<script type="text/javascript" src="quiz_config.js"></script>
+	<style>
+		#nav1
+		{
+		}
+
+		#nav1 > ul > li
+		{
+			display: inline-block;
+		}
+		
+			#nav1 > ul > li:last-child
+			{
+				padding-right: 0;
+			}
+
+			#nav1 > ul > li > a,
+			#nav1 > ul > li > span
+			{
+				display: block;
+				padding: 0.29em 1.5em;
+				letter-spacing: 1px;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: 200;
+				font-size: 1.2em;
+				outline: 0;
+				color: white;
+				cursor: default;
+			}
+
+
+			#nav1 > ul > li > a:hover
+			{
+				color: white;
+			}
+ 
+			#nav1 li.active a
+			{
+				background: none;
+				border-radius: 40px;
+				border: 2px solid;
+				border-color: white;
+				color: white;
+			}
+
+			#nav1 > ul > li > ul
+			{
+				display: none;
+			}
+	
+	</style>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top" style="border-top: 2px solid #333;">
+		<div class="container">
+		<div class="navbar-header">
+		  <h2><a class="navbar-brand" href="#" style="font-size: 40px; margin-top: -8px; font-weight: 600; color: #0073A6;">ThinkTon</a></h2>
+		  <!-- <br><h6 style="font-size: 14px; padding-left: 2%; width: 100%;font-family: sans-serif;">A Unit of JSpiders Training and Development Center</h6> -->
+		</div>
+			<p class="navbar-text navbar-right visible-lg">Signed in as <a href="#" class="navbar-link" title="Logout">Ashish</a><br><a href="#" style="padding-left: 40%;" title="Logout">Log-Out</a></p>
+		</div>
+	</nav>
+	<div style="padding-top:45px">
+		<div style="background: #337ab6; height: 78px;">
+			<h1 class="header-line">Add Questions</h1>
+			<!-- <nav id="nav1" style="padding-top:35px">
+				<ul>
+					<li class="active"><a>Aptitude</a></li>
+					<li><a>Core-Java</a></li>
+					<li><a>J2EE</a></li>
+					<li><a>Web-Technologies</a></li>
+					<li><a>SQL</a></li>
+					<li><a>Data Structures</a></li>
+					<li><a>C/C++</a></li>
+				</ul>
+			</nav> -->
+		</div>
+		<ol class="breadcrumb" style="padding-left:5%;">
+			<li><a><b>Path:</b></a></li>
+			<li><a href="#">Control Panel</a></li>
+			<li class="active">Add Questions</li>
+		</ol>
+		<div ng-app>
+			<form>
+				<div class="container">
+					<div style="background: #1799CB;padding: 10px;border-radius: 10px;color: white;">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									 <label for="exampleInputEmail1">Subject Name</label>
+									 <select id="qualification" class="form-control">
+										<option value="Select Topic">Select Subject</option>
+										<option value="Aptitude">Aptitude</option>
+										<option value="CoreJava">CoreJava</option>
+										<option value="J2EE">J2EE</option>
+										<option value="WebTechnologies">WebTechnologies</option>
+										<option value="SQL">SQL</option>
+										<option value="DataStructures">DataStructures</option>
+										<option value="C/C++">C/C++</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="exampleInputEmail1">Test Name</label>
+									<input type="Text" class="form-control" ng-model="sname" id="subjectname" placeholder="Enter test name">
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Question No:</label>
+								<input type="Text" class="form-control" ng-model="questionno" id="subjectname" placeholder="Qst. No:">
+							</div>
+						</div>
+						<div class="col-lg-10">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Question</label>
+								<textarea class="form-control" ng-model="question" rows="3" placeholder="Enter Question here"></textarea>
+							</div>
+							<div class="form-group">
+								<input type="Text" class="form-control" ng-model="opta" id="subjectname" placeholder="Enter Option A here">
+							</div>
+							<div class="form-group">
+								<input type="Text" class="form-control" ng-model="optb" id="subjectname" placeholder="Enter Option B here">
+							</div>
+							<div class="form-group">
+								<input type="Text" class="form-control" ng-model="optc" id="subjectname" placeholder="Enter Option C here">
+							</div>
+							<div class="form-group">
+								<input type="Text" class="form-control" ng-model="optd" id="subjectname" placeholder="Enter Option D here">
+							</div>
+							
+							<div class="form-group">
+								 <label for="exampleInputEmail1">Answer</label>
+								<input type="Text" class="form-control" ng-model="ans" id="subjectname" placeholder="Enter Answer here">
+							</div>
+						</div>
+					</div>
+					<div class="jumbotron">
+						<div class="row">
+							<h4>Preview: </h4>
+							<div class="col-lg-2">
+								<div class="alert alert-info" style="background: whitesmoke;border: 1px solid #CCCCCC;text-align: center;padding: 8px;">
+									<h4><b>{{questionno}} )</b></h4>
+								</div>
+							</div>
+							<div class="col-lg-10">
+								<div>
+								  <pre style="font-weight:900;font-size: 16px; font-family: sans-serif;">{{question}}</pre>
+								</div>
+								<div class="demoview">
+									<p>a) {{opta}} <br>
+									b) {{optb}} <br>
+									c) {{optc}} <br>
+									d) {{optd}} <br><br>
+									<b>Answer: {{ans}}</b> </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navbar-text navbar-right">
+						<button type="reset" class="btn btn-default btn-lg">Reset</button>
+						<button type="submit" class="btn btn-primary btn-lg">Update</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<div style="background: #0073A6; padding-top: 25px; padding-bottom: 15px; border-top: 5px solid #03A9F4;color: white;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4><strong>About ThinkTon : </strong></h4>
+					<p>ThinkTon is an online assessment portal which aims at helping students to know there
+					transcend boundaries and time constraints in the task of constant evaluation performance. 
+					This test provides extensive tools to administer to monitor and grade for your performance.</p>
+				</div>
+				<div class="col-lg-4">
+					<h4><strong>About Mock :</strong></h4>
+					<p>Mock Test "The Art of Unit Testing" simulates the students who trains. 
+					 The test also prepares the student to be quick in answering and better manage their time. </p>
+				</div>
+				<div class="col-lg-4">
+					<address>
+					  <h4><strong>JSpiders</strong></h4>
+					  #13 &14, 3rd floor , Puttanna Chetty Complex,<br>
+					  Bull Temple Road, Bengaluru. 560004 <br>
+					  <abbr title="Phone">P:</abbr> +91-9686114422 
+					</address>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="background: #337AB6;padding: 8px;color: white;text-align: center;border-top: 5px solid #03A9F4;">
+		<p class="footer">CopyRight @ JSpiders</p>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
